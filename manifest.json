@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Netflix Auto Skipper",
+    "version": "1.0",
+    "description": "Passe automatiquement l'intro, le récapitulatif et l'outro sur Netflix.",
+    "permissions": ["storage", "scripting", "activeTab"],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "icon.png"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://www.netflix.com/*"],
+        "js": ["content.js"],
+        "run_at": "document_idle"
+      }
+    ],
+    "icons": {
+      "48": "icon.png"
+    }
+  }
+  
